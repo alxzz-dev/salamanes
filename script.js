@@ -82,13 +82,13 @@ document.querySelector('.contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
     // Initialize EmailJS (replace with your public key from emailjs.com)
-    emailjs.init('YOUR_PUBLIC_KEY_HERE');
+    emailjs.init('LTLuU9XfvH-7__Rd3');
     
     // Get form data
     const formData = new FormData(this);
     
     // Send email via EmailJS
-    emailjs.send('gmail', 'contact_form', {
+    emailjs.send('service_ei0wno1', 'contact_form', {
         from_name: formData.get('user_name'),
         from_email: formData.get('user_email'),
         message: formData.get('message'),
