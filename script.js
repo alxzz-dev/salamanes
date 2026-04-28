@@ -107,15 +107,12 @@ if (contactForm) {
             })
         })
         .then(function(response) {
-            if (!response.ok) {
-                return response.text().then(text => { throw new Error(response.status + ' ' + response.statusText + ' - ' + text); });
-            }
-            return response.text();
-        })
-        .then(function(bodyText) {
-            console.log('EmailJS response body:', bodyText);
-            contactForm.reset();
-            alert('Thank you for your message! I\'ll get back to you soon.');
+            return response.text().then(function(bodyText) {
+                console.log('EmailJS response status:', response.status, response.statusText);
+                console.log('EmailJS response body:', bodyText);
+                contactForm.reset();
+                alert('Thank you for your message! I\'ll get back to you soon.');
+            });
         })
         .catch(function(error) {
             console.error('Failed to send email:', error);
