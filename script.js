@@ -88,7 +88,7 @@ document.querySelector('.contact-form').addEventListener('submit', function(e) {
     const formData = new FormData(this);
     
     // Send email via EmailJS
-    emailjs.send('service_ei0wno1', 'contact_form', {
+    emailjs.send('service_ei0wno1', 'template_ylyq2sa', {
         from_name: formData.get('user_name'),
         from_email: formData.get('user_email'),
         message: formData.get('message'),
@@ -97,11 +97,12 @@ document.querySelector('.contact-form').addEventListener('submit', function(e) {
     .then(function(response) {
         console.log('Email sent successfully!', response);
         alert('Thank you for your message! I\'ll get back to you soon.');
-        document.querySelector('.contact-form').reset();
+        // Reset the form
+        document.getElementById('contact-form').reset();
     })
     .catch(function(error) {
         console.error('Failed to send email:', error);
-        alert('There was an error sending your message. Please try again or contact directly.');
+        alert('There was an error sending your message. Please try again or contact directly at salamanes.alexisjudebsemc2023@gmail.com');
     });
 });
 
