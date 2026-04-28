@@ -110,12 +110,12 @@ if (contactForm) {
             if (!response.ok) {
                 return response.text().then(text => { throw new Error(response.status + ' ' + response.statusText + ' - ' + text); });
             }
-            return response.json();
+            return response.text();
         })
-        .then(function(data) {
-            console.log('Email sent successfully!', data);
-            alert('Thank you for your message! I\'ll get back to you soon.');
+        .then(function(bodyText) {
+            console.log('EmailJS response body:', bodyText);
             contactForm.reset();
+            alert('Thank you for your message! I\'ll get back to you soon.');
         })
         .catch(function(error) {
             console.error('Failed to send email:', error);
