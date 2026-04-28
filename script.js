@@ -78,40 +78,51 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-document.querySelector('.contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    console.log('Form submitted!'); // Debug log
-    
-    // Initialize EmailJS (replace with your public key from emailjs.com)
-    emailjs.init('LTLuU9XfvH-7__Rd3');
-    console.log('EmailJS initialized'); // Debug log
-    
-    // Get form data
-    const formData = new FormData(this);
-    console.log('Form data:', {
-        name: formData.get('user_name'),
-        email: formData.get('user_email'),
-        message: formData.get('message')
-    }); // Debug log
-    
-    // Send email via EmailJS
-    emailjs.send('service_ei0wno1', 'template_ylyq2sa', {
-        from_name: formData.get('user_name'),
-        from_email: formData.get('user_email'),
-        message: formData.get('message'),
-        to_email: 'salamanes.alexisjudebsemc2023@gmail.com'
-    })
-    .then(function(response) {
-        console.log('Email sent successfully!', response);
-        alert('Thank you for your message! I\'ll get back to you soon.');
-        // Reset the form
-        document.getElementById('contact-form').reset();
-    })
-    .catch(function(error) {
-        console.error('Failed to send email:', error);
-        alert('There was an error sending your message. Please try again or contact directly at salamanes.alexisjudebsemc2023@gmail.com');
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        console.log('Form submitted!');
+
+        const formData = new FormData(this);
+        const templateParams = {
+            from_name: formData.get('user_name'),
+            from_email: formData.get('user_email'),
+            message: formData.get('message'),
+            to_email: 'salamanes.alexisjudebsemc2023@gmail.com'
+        };
+
+        console.log('Sending EmailJS request', templateParams);
+
+        fetch('https://api.emailjs.com/api/v1.0/email/send', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                service_id: 'service_ei0wno1',
+                template_id: 'template_exni9if',
+                user_id: 'LTLuU9XfvH-7__Rd3',
+                template_params: templateParams
+            })
+        })
+        .then(function(response) {
+            if (!response.ok) {
+                return response.text().then(text => { throw new Error(response.status + ' ' + response.statusText + ' - ' + text); });
+            }
+            return response.json();
+        })
+        .then(function(data) {
+            console.log('Email sent successfully!', data);
+            alert('Thank you for your message! I\'ll get back to you soon.');
+            contactForm.reset();
+        })
+        .catch(function(error) {
+            console.error('Failed to send email:', error);
+            alert('There was an error sending your message. Please try again or contact directly at salamanes.alexisjudebsemc2023@gmail.com');
+        });
     });
-});
+}
 
 
 const observerOptions = {
