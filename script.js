@@ -81,15 +81,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.querySelector('.contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
-   
-    const inputs = this.querySelectorAll('input, textarea');
+    // Initialize EmailJS (replace with your public key from emailjs.com)
+    emailjs.init('YOUR_PUBLIC_KEY_HERE');
+    
+    // Get form data
     const formData = new FormData(this);
     
-    
-    this.reset();
-    
-    
-    alert('Thank you for your message! I\'ll get back to you soon.');
+    // Send email via EmailJS
+    emailjs.send('gmail', 'contact_form', {
+        from_name: formData.get('user_name'),
+        from_email: formData.get('user_email'),
+        message: formData.get('message'),
+        to_email: 'salamanes.alexisjudebsemc2023@gmail.com'
+    })
+    .then(function(response) {
+        console.log('Email sent successfully!', response);
+        alert('Thank you for your message! I\'ll get back to you soon.');
+        document.querySelector('.contact-form').reset();
+    })
+    .catch(function(error) {
+        console.error('Failed to send email:', error);
+        alert('There was an error sending your message. Please try again or contact directly.');
+    });
 });
 
 
