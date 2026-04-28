@@ -80,12 +80,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 document.querySelector('.contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
+    console.log('Form submitted!'); // Debug log
     
     // Initialize EmailJS (replace with your public key from emailjs.com)
     emailjs.init('LTLuU9XfvH-7__Rd3');
+    console.log('EmailJS initialized'); // Debug log
     
     // Get form data
     const formData = new FormData(this);
+    console.log('Form data:', {
+        name: formData.get('user_name'),
+        email: formData.get('user_email'),
+        message: formData.get('message')
+    }); // Debug log
     
     // Send email via EmailJS
     emailjs.send('service_ei0wno1', 'template_ylyq2sa', {
