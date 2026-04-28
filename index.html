@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <h1>Alexis Jude Salamanes</h1>
+                     <p>I am a highly imaginative and enthusiastic BS in Entertainment amd Multimedia Computing student with expertise in 3D modeling, graphic design, animation, and video editing. I am proficient in translating my concepts into compelling visuals using design, motion, and story-telling skills, with an emphasis on creativity and innovation.</p>
+                    <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                </div>
+                <div class="hero-profile">
+                    <div class="profile-circle">
+                        <img src="pfp/resume.jfif" alt="Profile Picture">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>My Works</h2>
+            
+            
+            <div class="portfolio-category">
+                <h3 class="category-title">Graphics</h3>
+                <p class="category-description">A collection of branding, poster, and concept visuals focused on stylized marketing and dramatic graphic storytelling.</p>
+                <div class="portfolio-grid">
+                    
+                    <div class="portfolio-item">
+                        <div class="item-image">
+                            <img src="Graphics/transformation.png" alt="Graphics project">
+                            <div class="item-overlay">
+                                <button class="btn-view" onclick="openLightbox('Graphics/transformation.png')">View</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h4>Transformation</h4>
+                            <p>Promotional graphic</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="portfolio-item">
+                        <div class="item-image">
+                            <img src="Graphics/tech.png" alt="Graphics project">
+                            <div class="item-overlay">
+                                <button class="btn-view" onclick="openLightbox('Graphics/tech.png')">View</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h4>Tech in Education</h4>
+                            <p>Educational infographic</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="portfolio-item">
+                        <div class="item-image">
+                            <img src="Graphics/S-EM FOODIE BLACK (1).png" alt="Graphics project">
+                            <div class="item-overlay">
+                                <button class="btn-view" onclick="openLightbox('Graphics/S-EM FOODIE BLACK (1).png')">View</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h4>Food</h4>
+                            <p>Brand identity</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="portfolio-item">
+                        <div class="item-image">
+                            <img src="Graphics/casino2.png" alt="Graphics project">
+                            <div class="item-overlay">
+                                <button class="btn-view" onclick="openLightbox('Graphics/casino2.png')">View</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h4>Casino</h4>
+                            <p>Advertising banner</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="portfolio-item">
+                        <div class="item-image">
+                            <img src="Graphics/poster.png" alt="Graphics project">
+                            <div class="item-overlay">
+                                <button class="btn-view" onclick="openLightbox('Graphics/poster.png')">View</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h4>Watchdogs</h4>
+                            <p>Digital collage art</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="portfolio-item">
+                        <div class="item-image">
+                            <img src="Graphics/1.png" alt="Graphic design sample">
+                            <div class="item-overlay">
+                                <button class="btn-view" onclick="openLightbox('Graphics/1.png')">View</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h4>Brand Identity</h4>
+                            <p>Branding design</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="portfolio-item">
+                        <div class="item-image">
+                            <img src="Graphics/2.png" alt="Graphic design sample">
+                            <div class="item-overlay">
+                                <button class="btn-view" onclick="openLightbox('Graphics/2.png')">View</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h4>Brand Identity</h4>
+                            <p>Branding design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="portfolio-category">
+                <h3 class="category-title">3D Models and Animations</h3>
+                <p class="category-description">Dynamic 3D assets, animations, and motion work built for immersive game environments and cinematic presentation.</p>
+                <div class="portfolio-grid">
+                    
+                    <div class="portfolio-item">
+                        <div class="item-video-container">
+                            <video class="portfolio-video" preload="metadata">
+                                <source src="3D model and animations/midterm.mp4" type="video/mp4">
+                                
+                            </video>
+                            <div class="video-overlay">
+                                <button class="play-btn" onclick="openVideoModal('3D model and animations/midterm.mp4', 'Midterm Animation', '3D animation showcase')">▶</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h4>OC design</h4>
+                            <p>3D animation showcase</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="portfolio-item">
+                        <div class="item-video-container">
+                            <video class="portfolio-video" preload="metadata">
+                                <source src="3D model and animations/timetag.mp4" type="video/mp4">
+                                
+                            </video>
+                            <div class="video-overlay">
+                                <button class="play-btn" onclick="openVideoModal('3D model and animations/timetag.mp4', 'Time Tag', 'Motion animation sequence')">▶</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h4>Time Tag</h4>
+                            <p>Our game characters</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="portfolio-item">
+                        <div class="item-video-container">
+                            <video class="portfolio-video" preload="metadata">
+                                <source src="3D model and animations/SALAMANES_CHEST.mkv" type="video/x-matroska">
+                                
+                            </video>
+                            <div class="video-overlay">
+                                <button class="play-btn" onclick="openVideoModal('3D model and animations/SALAMANES_CHEST.mkv', 'Salamanes Chest', '3D model animation')">▶</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h4>Minecraft chest</h4>
+                            <p>Animated 3D model</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="portfolio-item">
+                        <div class="item-image">
+                            <img src="3D model and animations/character timtag.png" alt="3D model screenshot">
+                            <div class="item-overlay">
+                                <button class="btn-view" onclick="openLightbox('3D model and animations/character timtag.png')">View</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h4>Character Asset</h4>
+                            <p>3D character illustration</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="portfolio-item">
+                        <div class="item-image">
+                            <img src="3D model and animations/chest.png" alt="3D model screenshot">
+                            <div class="item-overlay">
+                                <button class="btn-view" onclick="openLightbox('3D model and animations/chest.png')">View</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h4>Chess Asset</h4>
+                            <p>3D model design</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="portfolio-item">
+                        <div class="item-image">
+                            <img src="3D model and animations/labyrace charac.png" alt="3D model screenshot">
+                            <div class="item-overlay">
+                                <button class="btn-view" onclick="openLightbox('3D model and animations/labyrace charac.png')">View</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h4>Labyrace Character</h4>
+                            <p>Game character design</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="portfolio-item">
+                        <div class="item-image">
+                            <img src="3D model and animations/trap labyrace.png" alt="3D model screenshot">
+                            <div class="item-overlay">
+                                <button class="btn-view" onclick="openLightbox('3D model and animations/trap labyrace.png')">View</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h4>Trap Labyrace</h4>
+                            <p>Environment asset</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-category">
+                <h3 class="category-title">2D</h3>
+                <p class="category-description">2D game art and UI concepts with logos, menu layouts, and polished interface designs for interactive experiences.</p>
+                <div class="portfolio-grid">
+                    <!-- 2D Item 3 -->
+                    <div class="portfolio-item">
+                        <div class="item-image">
+                            <img src="2D/logofinal.png" alt="2D artwork">
+                            <div class="item-overlay">
+                                <button class="btn-view" onclick="openLightbox('2D/logofinal.png')">View</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h4>Logo Final</h4>
+                            <p>Game branding</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="portfolio-item">
+                        <div class="item-image">
+                            <img src="2D/Main menu SAMPLE.png" alt="2D artwork">
+                            <div class="item-overlay">
+                                <button class="btn-view" onclick="openLightbox('2D/Main menu SAMPLE.png')">View</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h4>Main Menu UI</h4>
+                            <p>Game interface sample</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="portfolio-item">
+                        <div class="item-image">
+                            <img src="2D/mainmenu.jpg" alt="2D artwork">
+                            <div class="item-overlay">
+                                <button class="btn-view" onclick="openLightbox('2D/mainmenu.jpg')">View</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h4>Main Menu</h4>
+                            <p>Interface presentation</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="portfolio-item">
+                        <div class="item-image">
+                            <img src="2D/sample logos.png" alt="2D artwork">
+                            <div class="item-overlay">
+                                <button class="btn-view" onclick="openLightbox('2D/sample logos.png')">View</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h4>Logo Samples</h4>
+                            <p>Branding concepts</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="portfolio-item">
+                        <div class="item-image">
+                            <img src="2D/ui assets.png" alt="2D artwork">
+                            <div class="item-overlay">
+                                <button class="btn-view" onclick="openLightbox('2D/ui assets.png')">View</button>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <h4>UI Assets</h4>
+                            <p>User interface elements</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="current-project" class="current-project">
+        <div class="container">
+            <div class="project-grid">
+                <div class="project-text">
+                    <span class="section-label">Current Project</span>
+                    <h2>TIMETAG</h2>
+                    <p>Time Tag is a chaotic 3D multiplayer bomb-pass game built in Unity. Players are thrust into a shared arena where a virtual bomb is passed between them — the last one holding it when the timer runs out dies. It blends competitive tension with fast, arcade-style movement. The project was developed using AI-assisted prototyping (vibe coding) with GitHub Copilot and ChatGPT to accelerate development.</p>
+                    <div class="project-actions">
+                        <button type="button" class="btn btn-secondary" onclick="openVideoModal('Current Project/TIMETAG!.mp4', 'Current Project - TIMETAG', 'Our Ga')">Watch Project</button>
+                        <a href="https://zeusscorfa.github.io/time-tag-game-website/asset/index.html" class="btn btn-primary" target="_blank" rel="noopener">Visit Website</a>
+                    </div>
+                </div>
+                <div class="project-video-box">
+                    <div class="item-video-container">
+                        <video class="portfolio-video" preload="metadata">
+                            <source src="Current Project/TIMETAG!.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-overlay">
+                            <button class="play-btn" onclick="openVideoModal('Current Project/TIMETAG!.mp4', 'Current Project - TIMETAG', 'Current animation preview')">▶</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am a highly dedicated 3rd-year BS Entertainment Multimedia and Computing major who is very keen on 3D modeling, graphic designing, animation, and more. I love bringing out creativity by producing visually impressive content through stories. In each multimedia project that I undertake, I am always looking for ways to enhance my skills and develop techniques through which I can be able to produce meaningful content. Creativity and passion are important aspects that I incorporate into all the multimedia projects that I engage in.
+                    </p>
+                    <div class="skills">
+                        <span class="skill-tag">Animation</span>
+                        <span class="skill-tag">3D Modeling</span>
+                        <span class="skill-tag">Editing</span>
+                        <span class="skill-tag">Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> salamanes.alexisjudebsemc2023@gmail.com</p>
+                    <p><strong>Phone:</strong> 0921-980-7811</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/salamanes-alexis-jude-b6ab25406/" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="https://www.facebook.com/alexis.salamanes" class="social-link" target="_blank" rel="noopener">Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-image" src="" alt="">
+    </div>
+
+    
+    <div id="video-modal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="video-modal-close" onclick="closeVideoModal()">&times;</span>
+            <video id="video-modal-player" controls>
+                <source id="video-modal-source" src="" type="video/mp4">
+                
+            </video>
+            <div class="video-modal-info">
+                <h4 id="video-modal-title"></h4>
+                <p id="video-modal-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
