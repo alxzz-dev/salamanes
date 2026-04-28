@@ -380,6 +380,9 @@
                         <span class="skill-tag">Editing</span>
                         <span class="skill-tag">Design</span>
                     </div>
+                    <div class="about-actions">
+                        <button class="btn btn-primary" onclick="openResumeModal()">View My Resume</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -438,6 +441,22 @@
             <div class="video-modal-info">
                 <h4 id="video-modal-title"></h4>
                 <p id="video-modal-description"></p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="resume-modal" class="resume-modal">
+        <div class="resume-modal-content">
+            <div class="resume-modal-header">
+                <h3>My Resume</h3>
+                <div class="resume-modal-actions">
+                    <button class="btn btn-primary" onclick="downloadResume()">Download</button>
+                    <button class="btn btn-secondary" onclick="closeResumeModal()">Back</button>
+                </div>
+            </div>
+            <div class="resume-modal-body">
+                <iframe id="resume-iframe" src="RESUME/SalamanesAlexisJude_Resume.pdf" width="100%" height="600px"></iframe>
             </div>
         </div>
     </div>

@@ -26,6 +26,28 @@ function closeVideoModal() {
 }
 
 
+function openResumeModal() {
+    const modal = document.getElementById('resume-modal');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeResumeModal() {
+    const modal = document.getElementById('resume-modal');
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+function downloadResume() {
+    const link = document.createElement('a');
+    link.href = 'RESUME/SalamanesAlexisJude_Resume.pdf';
+    link.download = 'SalamanesAlexisJude_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+
 function openLightbox(imageSrc) {
     const lightbox = document.getElementById('lightbox');
     const lightboxImage = document.getElementById('lightbox-image');
@@ -56,10 +78,19 @@ videoModal.addEventListener('click', function(e) {
 });
 
 
+const resumeModal = document.getElementById('resume-modal');
+resumeModal.addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeResumeModal();
+    }
+});
+
+
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         closeLightbox();
         closeVideoModal();
+        closeResumeModal();
     }
 });
 
