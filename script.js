@@ -1,4 +1,4 @@
-// Video modal functionality
+
 function openVideoModal(videoSrc, title, description) {
     const modal = document.getElementById('video-modal');
     const player = document.getElementById('video-modal-player');
@@ -174,3 +174,23 @@ document.querySelectorAll('.portfolio-item').forEach(item => {
     item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     observer.observe(item);
 });
+function openResumeModal() {
+    const modal = document.getElementById('resume-modal');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeResumeModal() {
+    const modal = document.getElementById('resume-modal');
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+function downloadResume() {
+    const link = document.createElement('a');
+    link.href = 'RESUME/SalamanesAlexisJude_Resume.pdf';
+    link.download = 'SalamanesAlexisJude_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
