@@ -3,48 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <meta name="theme-color" content="#0b1220">
+    <title>Alexis Jude Salamanes | Creative Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">Portfolio</div>
+            <a class="nav-brand" href="#home">AJS<span>.</span></a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><button class="nav-resume" type="button" onclick="openResumeModal()">Resume</button></li>
             </ul>
         </div>
     </nav>
-
-    <div id="resume-modal" class="resume-modal">
-    <div class="resume-modal-content">
-        <div class="resume-modal-header">
-            <h3>My Resume</h3>
-            <div class="resume-modal-actions">
-                <button class="btn btn-primary" onclick="downloadResume()">Download</button>
-                <button class="btn btn-secondary" onclick="closeResumeModal()">Back</button>
-            </div>
-        </div>
-        <div class="resume-modal-body">
-            <iframe id="resume-iframe" src="RESUME/SalamanesAlexisJude_Resume.pdf" width="100%" height="600px"></iframe>
-        </div>
-    </div>
-</div>
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-wrapper">
                 <div class="hero-content">
-                    <h1>Alexis Jude Salamanes</h1>
-                     <p>I am a highly imaginative and enthusiastic BS in Entertainment amd Multimedia Computing student with expertise in 3D modeling, graphic design, animation, and video editing. I am proficient in translating my concepts into compelling visuals using design, motion, and story-telling skills, with an emphasis on creativity and innovation.</p>
-                    <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                    <span class="section-label">Creative Developer &amp; Multimedia Artist</span>
+                    <h1>Alexis Jude <span>Salamanes</span></h1>
+                    <p>I turn ideas into memorable digital experiences through 3D design, animation, graphic design, and video editing.</p>
+                    <div class="hero-actions">
+                        <a href="#portfolio" class="btn btn-primary">Explore My Work</a>
+                        <button type="button" class="btn btn-secondary" onclick="openResumeModal()">View Resume</button>
+                    </div>
                 </div>
                 <div class="hero-profile">
+                    <div class="profile-orbit" aria-hidden="true"></div>
                     <div class="profile-circle">
-                        <img src="pfp/pfp.jpg" alt="Profile Picture">
+                        <img src="pfp/pfp.jpg" alt="Portrait of Alexis Jude Salamanes">
                     </div>
                 </div>
             </div>
@@ -485,7 +477,7 @@
                 </div>
             </div>
             <div class="resume-modal-body">
-                <iframe id="resume-iframe" src="RESUME/SalamanesAlexisJude_Resume.pdf" width="100%" height="600px"></iframe>
+                <iframe id="resume-iframe" src="RESUME/Alexis_Jude_D_Salamanes_Resume_A4_.pdf" width="100%" height="600px" title="Alexis Jude Salamanes resume"></iframe>
             </div>
         </div>
     </div>
